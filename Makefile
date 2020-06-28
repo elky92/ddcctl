@@ -10,7 +10,7 @@ CCFLAGS ?= -Wno-unused-variable
 
 ## Uncomment to use an external app 'OSDisplay' to have a BezelUI-like OSD
 ##  provided by https://github.com/zulu-entertainment/OSDisplay
-#CCFLAGS += -DOSD
+CCFLAGS += -DOSD
 
 all: clean ddcctl
 
