@@ -30,10 +30,7 @@ ddcctl: DDC.o
 	$(CC) -Wall $(CCFLAGS) -o $@ -lobjc -framework IOKit -framework AppKit -framework Foundation $< $@.m
 
 install: ddcctl
-        if [[ ! -d '/usr/local/Cellar/ddcctl/0.1/bin' ]]; then
-	    mkdir -p '/usr/local/Cellar/ddcctl/0.1/bin'
-	fi
-	install ddcctl /usr/local/Cellar/ddcctl/0.1/bin/
+	install ddcctl ./
 
 clean:
 	$(RM) *.o ddcctl
